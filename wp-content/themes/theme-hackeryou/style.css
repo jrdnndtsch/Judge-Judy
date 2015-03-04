@@ -178,7 +178,8 @@ body {
 .content {
   float: left;
   width: 65%;
-  margin-right: 5%; }
+  margin-right: 5%;
+  margin-top: 65px; }
 
 .full {
   width: 100%; }
@@ -238,19 +239,33 @@ pre {
   width: 30%;
   height: 100vh;
   float: right;
-  text-align: center;
-  background: #F8F8F8; }
+  background: #F8F8F8;
+  position: relative;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transition: 1s; }
+
+.comeIn {
+  transform: translateX(0);
+  -webkit-transform: translateX(0); }
+
+.bookingSpace {
+  height: 80vh;
+  display: none; }
 
 .sidebar ul {
-  margin: 0; }
-
-.sidebar ul li {
-  list-style: none; }
-
-#menu-sidemenu {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   font-family: 'Avenir Next', sans-serif;
   font-size: 38px;
-  padding: 10px; }
+  padding: 10px;
+  list-style: none; }
+  .sidebar ul li {
+    margin: 25px; }
 
 /* =============================================================================
                    Footer
@@ -261,9 +276,22 @@ footer {
 /* =============================================================================
                    Main (menu)
    ========================================================================== */
-ul.menu {
+ul.Main {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: white;
+  width: 100%;
+  z-index: 1;
+  position: fixed; }
+
+ul.Main li {
+  display: inline;
+  margin-right: 10px;
+  display: inline-block;
+  float: left;
+  padding: 25px; }
+  ul.Main li:last-child {
+    float: right; }
 
 /* =============================================================================
                    Comment Styling

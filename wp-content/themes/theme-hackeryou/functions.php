@@ -46,31 +46,55 @@ of writing our own script tags in the header and footer. */
 
 function hackeryou_scripts() {
 
-	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
-	wp_deregister_script('jquery');
-  wp_enqueue_script(
-  	'jquery',
-  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
-  	false, //dependencies
-  	null, //version number
-  	true //load in footer
-  );
 
-  wp_enqueue_script(
-    'plugins', //handle
-    get_template_directory_uri() . '/js/plugins.js', //source
-    false, //dependencies
-    null, // version number
-    true //load in footer
-  );
+	// Create the my_scripts function
+		
+			// Deregister the built-in version of jQuery
+		    wp_deregister_script('jquery');
+		    // Register a CDN hosted version. If browsing on a secure connection, use HTTPS.
+		    wp_register_script('jquery', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? 's' : '') . '://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, null, true);
+		    // Register jQuery UI
+		    wp_register_script('jquery-ui', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? 's' : '') . '://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js', array('jquery'), null, true);
+			// Register JS file
+		    wp_enqueue_script('my-js', get_template_directory_uri() . '/js/scripts.js', array('jquery','jquery-ui'), null, true);
+	
 
-  wp_enqueue_script(
-    'scripts', //handle
-    get_template_directory_uri() . '/js/scripts.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
-    null, // version number
-    true //load in footer
-  );
+	// //Don't use WordPress' local copy of jquery, load our own version from a CDN instead
+	// wp_deregister_script('jquery');
+ //  wp_enqueue_script(
+ //  	'jquery',
+ //  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+ //  	false, //dependencies
+ //  	null, //version number
+ //  	true //load in footer
+ //  );
+
+
+
+ //  	wp_deregister_script('jquery-ui');
+ //    wp_enqueue_script(
+ //    	'jquery-ui',
+ //    	"http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js",
+ //    	false, //dependencies
+ //    	null, //version number
+ //    	true //load in footer
+ //    );
+
+ //  wp_enqueue_script(
+ //    'plugins', //handle
+ //    get_template_directory_uri() . '/js/plugins.js', //source
+ //    false, //dependencies
+ //    null, // version number
+ //    true //load in footer
+ //  );
+
+ //  wp_enqueue_script(
+ //    'scripts', //handle
+ //    get_template_directory_uri() . '/js/scripts.js', //source
+ //    array( 'jquery', 'plugins' ), //dependencies
+ //    null, // version number
+ //    true //load in footer
+ //  );
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts' );

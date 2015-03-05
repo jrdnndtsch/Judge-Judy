@@ -244,6 +244,19 @@ pre {
   transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transition: 1s; }
+  .sidebar ul {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 38px;
+    padding: 10px;
+    list-style: none; }
+    .sidebar ul li {
+      margin: 25px; }
 
 .comeIn {
   transform: translateX(0);
@@ -253,19 +266,9 @@ pre {
   height: 80vh;
   display: none; }
 
-.sidebar ul {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  font-family: 'Avenir Next', sans-serif;
-  font-size: 38px;
-  padding: 10px;
-  list-style: none; }
-  .sidebar ul li {
-    margin: 25px; }
+ul.Main li:hover {
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer; }
 
 /* =============================================================================
                    Footer

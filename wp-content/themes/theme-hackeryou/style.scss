@@ -121,6 +121,7 @@ pre {
 /* =============================================================================
                    sideMenu
    ========================================================================== */
+
 .sidebar {
   width:30%;
   height: 100vh;
@@ -130,18 +131,7 @@ pre {
   transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transition: 1s;
-}
-.comeIn{
-  transform: translateX(0);
-  -webkit-transform: translateX(0);
-}
-
-.bookingSpace{
-  height: 80vh;
-  display: none;
-}
-
-  .sidebar ul {
+  ul{
     margin:0;
     position: absolute;
     top:50%;
@@ -155,7 +145,26 @@ pre {
     li{
       margin:25px;
     }
-    
+  }
+}
+
+.comeIn{
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+.bookingSpace{
+  height: 80vh;
+  display: none;
+}
+
+  
+
+  ul.Main li{
+    &:hover{
+      color: rgba(0,0,0,0.6);
+      cursor: pointer;
+    }
   }
 
  

@@ -6,6 +6,7 @@ $(function(){
 	$('.navicon').on('click', function(){
 		var options = {direction: "left"};
 		$('.sidebar').toggleClass('comeIn');
+		$('.heroImg').toggleClass('moveOver');
 	 
 	});
 

@@ -13,6 +13,8 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
+	add_image_size('half', 600, 300, true);
+	add_image_size('full', 2000, 700, true);
 
 
 	// Add default posts and comments RSS feed links to head
@@ -126,6 +128,13 @@ function hackeryou_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'hackeryou_wp_title', 10, 2 );
+add_filter('post_thumbnail_html', 'remove_width_attribute', 10);
+add_filter('image_send_to_editor', 'remove_width_attribute', 10);
+
+function remove_width_attribute($html){
+	$html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+	return $html;
+}
 
 /*
   Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.

@@ -341,6 +341,20 @@ ul.Main li {
 /* =============================================================================
                      Post / Single
      ========================================================================== */
+.entry-head {
+  padding: 50px;
+  text-align: center; }
+
+.entry-featImg .featImg {
+  height: 500px;
+  background-size: cover; }
+
+.contentWrapper {
+  max-width: 960px;
+  margin: 0 auto; }
+  .contentWrapper .entry-content {
+    padding: 50px; }
+
 /* =============================================================================
                    Comment Styling
    ========================================================================== */

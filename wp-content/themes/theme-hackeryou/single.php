@@ -39,8 +39,6 @@
         </div><!-- #nav-below -->
       
 
-        <?php comments_template( '', true ); ?>
-
        </div> <!-- end .contentWrapper --> 
       <?php endwhile; // end of the loop. ?>
     </div> <!-- /.content -->

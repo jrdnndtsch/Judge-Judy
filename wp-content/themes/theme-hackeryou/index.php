@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container clearfix">
 
     <div class="content">
 	<div class="wrapperIndex clearfix">

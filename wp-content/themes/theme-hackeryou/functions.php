@@ -300,3 +300,82 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_blog-name',
+		'title' => 'Blog Name',
+		'fields' => array (
+			array (
+				'key' => 'field_54fa0bd7760d0',
+				'label' => 'Blog Name',
+				'name' => 'blogname',
+				'type' => 'text',
+				'instructions' => 'enter the title of your website or blog here. This is what will display across the hero image! Be fun with it!!!',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_home-blurb',
+		'title' => 'Home-Blurb',
+		'fields' => array (
+			array (
+				'key' => 'field_54f9da24fbb62',
+				'label' => 'Home-Blurb',
+				'name' => 'homeBlurb',
+				'type' => 'text',
+				'instructions' => 'This will add a blurb to the top of your home page. Great for about info!',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => 500,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}

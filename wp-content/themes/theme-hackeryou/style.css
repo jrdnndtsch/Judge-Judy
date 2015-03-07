@@ -6,6 +6,10 @@ Version: 1.0
 Author: HackerYou
 Author URI: http://hackeryou.com
 */
+@font-face {
+  font-family: Anders;
+  src: url(fonts/Anders.ttf); }
+
 /* =============================================================================
                    Normalize, border box and clearfix
    ========================================================================== */
@@ -170,7 +174,8 @@ img.alignright {
                    Default Styling
    ========================================================================== */
 body {
-  color: #222; }
+  color: #222;
+  font-family: 'Anders'; }
 
 .container {
   margin: 0 auto; }
@@ -358,7 +363,9 @@ ul.Main li {
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    z-index: 9999; }
+    z-index: 9999;
+    color: #F2F2F2;
+    font-size: 4em; }
 
 /* =============================================================================
                      Blog / Index

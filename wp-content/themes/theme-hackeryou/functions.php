@@ -379,3 +379,5 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+add_action( 'acf/field_group/admin_enqueue_scripts', 'register_field_group' );

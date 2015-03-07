@@ -175,7 +175,7 @@ img.alignright {
    ========================================================================== */
 body {
   color: #222;
-  font-family: 'Anders'; }
+  font-family: 'Avenir Next', sans-serif; }
 
 .container {
   margin: 0 auto; }
@@ -365,6 +365,7 @@ ul.Main li {
     -webkit-transform: translate(-50%, -50%);
     z-index: 9999;
     color: #F2F2F2;
+    font-family: 'Anders';
     font-size: 4em; }
 
 /* =============================================================================

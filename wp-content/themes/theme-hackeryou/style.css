@@ -282,6 +282,14 @@ pre {
 .bookingSpace {
   height: 80vh;
   display: none; }
+  .bookingSpace .bookingInfo {
+    float: left;
+    width: 65%;
+    padding: 5%; }
+    .bookingSpace .bookingInfo p.email {
+      padding-top: 5%; }
+  .bookingSpace .bookingMap {
+    padding: 5%; }
 
 ul.Main li:hover {
   color: rgba(0, 0, 0, 0.6);

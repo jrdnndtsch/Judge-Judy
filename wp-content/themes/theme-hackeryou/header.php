@@ -20,7 +20,16 @@
 <header>
   <div class="container clearfix">
     <div class="bookingSpace">
-      <h1>Merp</h1>
+      <div class="bookingInfo">
+        <h2><?php the_field('booking_page_title'); ?></h2>
+        <p><?php the_field('booking_text'); ?></p>
+        <p class="email"><?php the_field('booking_email'); ?></p>
+        <p><?php the_field('booking_phone_number'); ?></p>
+      </div>
+      <div class="bookingMap">
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header_sidebar') ) : 
+endif; ?>
+    </div>
     </div> <!-- end .bookingSpace -->
       <ul class="Main">
         <li class="booking">Book a Table</li>

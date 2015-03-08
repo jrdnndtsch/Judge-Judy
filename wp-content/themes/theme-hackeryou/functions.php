@@ -381,3 +381,22 @@ if(function_exists("register_field_group"))
 }
 
 add_action( 'acf/field_group/admin_enqueue_scripts', 'register_field_group' );
+
+
+/**
+ * Register Widget Area.
+ *
+ */
+function wpgyan_widgets_init() {
+ 
+	register_sidebar( array(
+		'name' => 'Header Top',
+		'id' => 'header_sidebar',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'wpgyan_widgets_init' );
+?>

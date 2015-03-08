@@ -198,9 +198,18 @@ pre {
 .bookingSpace{
   height: 80vh;
   display: none;
-
+  .bookingInfo{
+    float: left;
+    width: 65%;
+    padding: 5%;
+    p.email {
+      padding-top: 5%;
+    }
+  }
+  .bookingMap{
+    padding: 5%;
+  }
 }
-
   
 
   ul.Main li{

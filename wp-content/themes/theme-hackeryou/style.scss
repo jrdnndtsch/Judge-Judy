@@ -37,8 +37,8 @@ img {
 .aligncenter    { text-align: center; margin: 0 auto; }
 .alignleft      { float: left; }
 .alignright     { float: right; }
-img.alignleft     { padding-right: 5px;}
-img.alignright    { padding-left: 5px; }
+img.alignleft     { margin-right: 3%;}
+img.alignright    { margin-left: 3%; }
 .clear        { width:100%; float:left; clear:both;}
 
 
@@ -49,8 +49,10 @@ img.alignright    { padding-left: 5px; }
 
 body {
   color:#222;
-  
-  font-family:  'Avenir Next', sans-serif;
+  font-family: 'Avenir';
+}
+.blogname{
+  font-family: 'Anders';
 }
 
 .container {
@@ -157,12 +159,15 @@ pre {
   background: #F8F8F8;
   position: absolute;
   top: 0;
-  right: 0;
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transition: 1s;
+  left: 70%;
+  // transform: translateX(100%);
+  // -webkit-transform: translateX(100%);
+  // transition: 1s;
   z-index: 1;
   display: none;
+  animation: comeIn 5s infinite;
+  -webkit-animation: comeIn 5s infinite;
+
   ul{
     margin:0;
     position: absolute;
@@ -181,12 +186,14 @@ pre {
 }
 
 .comeIn{
-  transform: translateX(0);
-  -webkit-transform: translateX(0);
-  display: block;
-  position: absolute;
-
+  // transform: translateX(0);
+  // -webkit-transform: translateX(0);
+  // display: block;
+  // position: absolute;
+  // transition: .5s ease-in-out;
 }
+
+
 
 .bookingSpace{
   height: 80vh;
@@ -244,13 +251,51 @@ footer {
     .main{
       position: relative;
     }
+    .navicon{
+      position: relative;
+      top:10px;
+      right: 25px ;
+      .naviconIcon, .naviconIcon:before, .naviconIcon:after{
+        content: '';
+        height: 1px;
+        width: 25px;
+        background: #222;
+        position: absolute;
+        display: block;
+        transition: all .5s ease-in-out;
+      }
+      .naviconIcon:before{
+        top: -8px;
+      }
+      .naviconIcon:after{
+        bottom: -8px;
+      }
+    }  
+.navicon{
+   .naviconIcon2{
+    background-color:transparent;
+   }
+   .naviconIcon2:before, .naviconIcon2:after{
+    content:'';
+    height: 1px;
+    width: 25px;
+    background: #222;
+    position: absolute;
+    display: block;
+    transition: all .5s ease-in-out;
+    top:0;
+   }
+   .naviconIcon2:before{
+    transform:rotate(-45deg);
+    
+   }
+   .naviconIcon2:after{
 
-  //     ul.menu li a {
-  //       color:#333;
-  //       padding:10px;
-  //       background:#333;
-  //       color:white;
-  //     }
+    transform:rotate(45deg);
+
+   }
+ }  
+  
 
   /* =============================================================================
                      Home / Page
@@ -376,6 +421,7 @@ footer {
   margin: 0 auto;
   .entry-content{
     padding:50px;
+        
+    }
   }
- }
 

@@ -8,18 +8,24 @@
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <div class="entry-head">
+        <!-- <div class="entry-head">
           <h1 class="entry-title"><?php the_title(); ?></h1>
           <h4 class="entry-author">Words: <?php echo get_the_author(); ?></p>
           <h4 class="entry-date">Date: <?php echo get_the_date('l F d, Y') ?></h4>
-        </div><!-- .entry-author -->
+        </div><!-- .entry-author --> 
 
         <div class="entry-featImg">
           <?php $thumb_id = get_post_thumbnail_id();
           $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
           $thumb_url = $thumb_url_array[0]; ?>
           
-          <div class="featImg" style="background-image: url('<?php echo $thumb_url ?>')"></div>
+          <div class="featImg" style="background-image: url('<?php echo $thumb_url ?>')">
+            <div class="entry-head fadeOut">
+              <h1 class="entry-title"><?php the_title(); ?></h1>
+              <h4 class="entry-author">Words: <?php echo get_the_author(); ?></p>
+              <h4 class="entry-date">Date: <?php echo get_the_date('l F d, Y') ?></h4>
+            </div><!-- .entry-author -->
+          </div>
         </div> <!-- end .entry-featImg -->
 
         <div class="contentWrapper">

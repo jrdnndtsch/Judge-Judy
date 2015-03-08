@@ -187,7 +187,7 @@ body {
   float: left;
   width: 100%;
   margin-right: 5%;
-  margin-top: 65px;
+  margin-top: 0px;
   z-index: 100; }
 
 .full {
@@ -427,15 +427,33 @@ ul.Main li {
                      Post / Single
      ========================================================================== */
 .entry-head {
-  padding: 50px;
-  text-align: center; }
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: white; }
 
 .entry-featImg .featImg {
-  height: 500px;
-  background-size: cover; }
+  padding: 25%;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; }
 
 .contentWrapper {
   max-width: 960px;
   margin: 0 auto; }
   .contentWrapper .entry-content {
     padding: 50px; }
+
+/* =============================================================================
+                    Special Page
+     ========================================================================== */
+.pageWrapper {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.stuff {
+  height: 600px; }

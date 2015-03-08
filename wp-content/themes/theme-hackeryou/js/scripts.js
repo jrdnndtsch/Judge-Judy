@@ -4,9 +4,10 @@
 $(function(){
 	
 	$('.navicon').on('click', function(){
-		var options = {direction: "left"};
-		$('.sidebar').toggleClass('comeIn');
-		$('.heroImg').toggleClass('moveOver');
+		$('.naviconIcon').toggleClass('naviconIcon2');
+		// $('.sidebar').toggleClass('comeIn');
+		// $('.heroImg').toggleClass('moveOver');
+		$('.sidebar').toggle('slide', {direction: 'right'}, 500);
 	 
 	});
 

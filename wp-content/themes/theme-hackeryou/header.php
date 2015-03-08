@@ -24,7 +24,9 @@
     </div> <!-- end .bookingSpace -->
       <ul class="Main">
         <li class="booking">Book a Table</li>
-        <li class="navicon">☰</li>
+        <li class="navicon">
+          <span class = "naviconIcon"></span>
+        </li>
       </ul> <!-- end ul.Main -->
 
    <!--  <?php wp_nav_menu( array(

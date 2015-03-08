@@ -37,8 +37,8 @@ img {
 .aligncenter    { text-align: center; margin: 0 auto; }
 .alignleft      { float: left; }
 .alignright     { float: right; }
-img.alignleft     { padding-right: 5px;}
-img.alignright    { padding-left: 5px; }
+img.alignleft     { margin-right: 3%;}
+img.alignright    { margin-left: 3%; }
 .clear        { width:100%; float:left; clear:both;}
 
 
@@ -49,6 +49,9 @@ img.alignright    { padding-left: 5px; }
 
 body {
   color:#222;
+  font-family: 'Avenir';
+}
+.blogname{
   font-family: 'Anders';
 }
 
@@ -417,6 +420,7 @@ footer {
   margin: 0 auto;
   .entry-content{
     padding:50px;
+        
+    }
   }
- }
 

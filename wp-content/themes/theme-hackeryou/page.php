@@ -18,12 +18,14 @@
       </div> <!-- end .homeBlurb --> 
       <div class="homeWrapper clearfix">
         <div class="postTitle">
-          <a href="#">
-            <?php  
-            $aboutid = get_page_by_title('About', ARRAY_N);
-            echo get_the_title($aboutid[0]);
-            ?>
-          </a>  
+          <div class="titleText">
+            <a href="#">
+              <?php  
+              $aboutid = get_page_by_title('About', ARRAY_N);
+              echo get_the_title($aboutid[0]);
+              ?>
+            </a> 
+          </div> 
         </div>  
           
         <div class="postImage clearfix">
@@ -38,12 +40,14 @@
 
       <div class="homeWrapper clearfix">
         <div class="postTitle">
-          <a href="#">
-            <?php  
-            $menuid = get_page_by_title('Menu', ARRAY_N);
-            echo get_the_title($menuid[0]);
-            ?>
-          </a>  
+          <div class="titleText">
+            <a href="#">
+              <?php  
+              $menuid = get_page_by_title('Menu', ARRAY_N);
+              echo get_the_title($menuid[0]);
+              ?>
+            </a>  
+          </div>
         </div>  
           
         <div class="postImage clearfix">

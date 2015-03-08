@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: HackerYou Starter Theme
 Theme URI: http://hackeryou.com;
@@ -425,11 +426,11 @@ ul.Main li {
   .postWrapper .postImage .image {
     height: 300px;
     background-size: cover; }
-.postWrapper:nth-child(2n) {
+.postWrapper:nth-child(2n+1) {
   background: #F2F2F2; }
-  .postWrapper:nth-child(2n) .postImage {
+  .postWrapper:nth-child(2n+1) .postImage {
     float: right; }
-  .postWrapper:nth-child(2n) .postTitle {
+  .postWrapper:nth-child(2n+1) .postTitle {
     float: right; }
 
 /* =============================================================================
@@ -444,7 +445,7 @@ ul.Main li {
   -webkit-transform: translate(-50%, -50%);
   color: white; }
 
-.entry-featImg .featImg {
+.featImg {
   padding: 25%;
   width: 100%;
   background-size: cover;
@@ -458,11 +459,47 @@ ul.Main li {
     padding: 50px; }
 
 /* =============================================================================
-                    Special Page
+                    Special Page / About
      ========================================================================== */
+.aboutHeader h2 {
+  font-size: 60px;
+  font-weight: lighter;
+  letter-spacing: 1.5px; }
+
 .pageWrapper {
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: 50px auto; }
+  .pageWrapper .aboutNar .img1 {
+    float: left;
+    width: 60%;
+    margin-right: 25px; }
+  .pageWrapper .aboutNar .nar {
+    position: relative; }
+    .pageWrapper .aboutNar .nar p {
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%); }
 
-.stuff {
-  height: 600px; }
+.aboutQuote {
+  margin-top: 100px; }
+  .aboutQuote .img2 {
+    float: right;
+    width: 60%;
+    margin-left: 25px; }
+  .aboutQuote .nar {
+    position: relative; }
+    .aboutQuote .nar p {
+      width: 35%;
+      font-size: 20px;
+      font-style: italic;
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%); }
+      .aboutQuote .nar p:before {
+        font-family: 'Times New Roman';
+        content: '“”';
+        display: block;
+        text-align: center;
+        font-size: 50px; }

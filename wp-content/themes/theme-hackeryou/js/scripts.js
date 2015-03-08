@@ -16,16 +16,25 @@ $(function(){
 	});
 //fade out headers as scrolled
 	$(window).on('scroll', function(){
-		// wp.windowHeight = $(window).height();
-		// wp.scrollHeight = $(window).scrollTop();
-		// wp.scrollPercentage =  (wp.scrollHeight / wp.windowHeight);
-		console.log($(this).scrollTop());
+		// console.log($(this).scrollTop());
 		if ($(this).scrollTop() > 150) {
 		        $('.fadeOut').fadeOut(500);
 		    } else {
 		        $('.fadeOut').fadeIn(500);
 		};
 	});
+
+	// $(window).on('scroll', function(){
+	// 	console.log($(window).scrollTop())
+	// 	if($(this).scrollTop() > 90){
+	// 	 $('.aboutNar').fadeIn(500);	
+	// 	 $('.aboutQuote').fadeIn(500);
+	// 	}
+	// 	else{
+	// 		$('.aboutNar').fadeOut(500);
+	// 		$('.aboutQuote').fadeOut(500);
+	// 	}
+	// });
 
 });
 
